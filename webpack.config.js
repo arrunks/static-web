@@ -1,6 +1,7 @@
 var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: './src/index.js',
   output: {
@@ -41,6 +42,10 @@ module.exports = {
     	new webpack.ProvidePlugin({
            $: "jquery",
            jQuery: "jquery"
-       })
+       }),
+    	new HtmlWebpackPlugin({
+    		template: './src/index.html',
+    		inject: 'body',
+  	   })
   ]
 };
