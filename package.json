@@ -10,7 +10,10 @@
   "keywords": [
     "html",
     "css",
-    "javascript"
+    "javascript",
+    "webpack",
+    "babel",
+    "bootstrap"
   ],
   "author": "arrunks",
   "license": "ISC",
@@ -22,6 +25,10 @@
     "css-loader": "^0.26.1",
     "extract-text-webpack-plugin": "^2.0.0-rc.3",
     "file-loader": "^0.10.0",
+    "jquery": "^3.1.1",
+    "node-sass": "^4.5.0",
+    "sass-loader": "^6.0.2",
+    "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^2.2.1"
   },
