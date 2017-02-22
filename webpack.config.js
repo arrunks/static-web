@@ -5,7 +5,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: './src/index.js',
   output: {
-    filename: 'dist.js',
+    filename: 'js/dist.js',
     path: path.resolve(__dirname, 'dist')
   },
   devtool: 'source-map',
@@ -29,16 +29,19 @@ module.exports = {
 	  },
 	  {
 	    test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-	    loader: 'url-loader?limit=10000&mimetype=application/font-woff'
+	    loader: 'url-loader?limit=10000&mimetype=application/font-woff&name=fonts/[name].[ext]'
 	  },
 	  {
 	    test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-	    loader: 'file-loader'
+	    loader: 'file-loader?limit=10000&name=fonts/[name].[ext]'
+	  },
+	  { test: /\.(jpe?g|png|gif|svg)$/i, 
+	  	loader: "file-loader?limit=10000&name=img/[name].[ext]"
 	  }
   	]
   },
   plugins:[
-    	new ExtractTextPlugin('styles.css'),
+    	new ExtractTextPlugin('./css/styles.css'),
     	new webpack.ProvidePlugin({
            $: "jquery",
            jQuery: "jquery"
