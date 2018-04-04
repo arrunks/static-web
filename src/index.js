@@ -1,7 +1,6 @@
 //Styles
-import './styles/bootstrap.min.css';
-import './styles/style.scss';
-
+require('./styles/style.scss');
+require ('bootstrap/dist/css/bootstrap.css');
 //Scripts
-import 'jquery';
-import './scripts/bootstrap.min.js';
+require('jquery');
+require('bootstrap');
